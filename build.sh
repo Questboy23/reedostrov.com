@@ -15,7 +15,7 @@ EOF
 cat > leviathan/index.html <<EOF
 $H<title>Leviathan</title><meta name="description" content="Leviathan protects a Mac from malware sites, harmful downloads and dangerous pasted commands."></head><body>$TOP
 <a class="back" href="/">&larr; All projects</a>
-<section class="p-hero"><div class="label">Project 01 &middot; macOS</div><h1 class="serif" style="margin-top:16px">Leviathan</h1><p class="lede serif">A quiet guard for your Mac. It stops malware before it gets a chance to run.</p>
+<section class="p-hero"><div class="label">Project 01 &middot; macOS</div><h1 class="serif" style="margin-top:16px">Leviathan</h1><p class="lede serif">It stops malware on your Mac before the malware can run.</p>
 <div class="actions"><a class="btn" href="https://github.com/Questboy23/leviathan/releases/latest/download/Leviathan.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/leviathan">View the code</a></div></section>
 <section class="blk"><h3 class="serif">What it does</h3><div class="prose"><p>Most Mac infections start in one of three ways. A fake website, a file you download, or a command a scam page tells you to paste into Terminal.</p><p>Leviathan watches all three. It runs in the background, so after setup there is nothing to click.</p></div></section>
 <section class="blk"><h3 class="serif">Why it helps</h3><ul class="pros">
