@@ -49,3 +49,5 @@ pre{margin-top:12px;background:var(--card);padding:16px;border-radius:8px;overfl
 .note{margin-top:16px;font-size:15px;color:var(--mute)}
 @media (max-width:720px){.wrap{padding:0 16px}.hero{padding:64px 0 48px}.row{grid-template-columns:1fr auto;padding:32px 0}.row .n{grid-column:1/-1}section.blk{grid-template-columns:1fr;gap:16px;padding:44px 0}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.intro{padding:48px 0 40px}.intro p{font-size:19px;color:var(--mute);max-width:46ch}
+h1.label{font-weight:400;font-size:13px}

@@ -6,8 +6,8 @@ TOP='<div class="wrap"><header class="top"><a class="name" href="/">Reed Ostrov<
 FOOT='<footer><span>Reed Ostrov</span><span>Free and open source. Both run on macOS.</span></footer></div></body></html>'
 cat > index.html <<EOF
 $H<title>Reed Ostrov</title><meta name="description" content="Free tools for your Mac by Reed Ostrov."></head><body>$TOP
-<section class="hero"><h1 class="serif">Small tools that keep a Mac safe and fast.</h1><p>Two free programs. Each one does one job in the background, and every change it makes can be undone.</p></section>
-<section class="projects"><div class="label">Projects</div>
+<section class="intro"><p>I build free, open source tools for the Mac. Below are my projects.</p></section>
+<section class="projects"><h1 class="label">Projects</h1>
 <a class="row" href="/leviathan/"><span class="n">01</span><div><h2 class="serif">Leviathan</h2><p>Blocks malware sites, quarantines harmful downloads and stops dangerous pasted commands.</p></div><span class="go" aria-hidden="true">&rarr;</span></a>
 <a class="row" href="/activity-monitored/"><span class="n">02</span><div><h2 class="serif">Activity Monitored</h2><p>Keeps your Mac responsive when too many programs fight for the processor.</p></div><span class="go" aria-hidden="true">&rarr;</span></a>
 </section>$FOOT
