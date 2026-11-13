@@ -108,3 +108,14 @@ section.blk h3{font-size:24px}
 pre{box-shadow:none;border-color:var(--line)}
 ul.pros li,ol.steps li{border-top-style:solid}
 @media (max-width:720px){.grid{grid-template-columns:1fr;gap:14px}.card{padding:20px}.p-hero{padding:24px 20px}section.blk{padding:22px 20px;grid-template-columns:1fr}}
+/* back link + download button fix */
+.crumb{margin:22px 0 16px}
+.back{display:inline-flex;align-items:center;gap:8px;margin:0;padding:8px 14px;background:var(--card);border:1px solid var(--line);border-radius:999px;font:500 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-decoration:none;box-shadow:1px 1px 0 var(--line);transition:color .15s,border-color .15s}
+.back:hover{color:var(--ink);border-color:var(--ink)}
+.back span{transition:transform .15s}.back:hover span{transform:translateX(-3px)}
+.btn,.btn:hover,.btn:active{transform:none}
+.btn{cursor:pointer;transition:background .15s,box-shadow .15s}
+.btn:hover{background:#7a302a;box-shadow:3px 3px 0 var(--line)}
+.btn:active{box-shadow:0 0 0 var(--line)}
+.btn:focus-visible,.back:focus-visible{outline:2px solid var(--mustard);outline-offset:3px}
+.actions{align-items:center}.size{font:12px "IBM Plex Mono",monospace;color:var(--mute);margin-left:-8px}

