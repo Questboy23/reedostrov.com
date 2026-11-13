@@ -1,7 +1,7 @@
 #!/bin/bash
 # Builds the three pages from shared header and footer.
 cd "$(dirname "$0")"
-H='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..500&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css">'
+H='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..500&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=2">'
 TOP='<div class="wrap"><header class="top"><a class="name" href="/">Reed Ostrov</a><a class="mute" href="https://github.com/Questboy23">GitHub</a></header>'
 FOOT='<footer><span>Reed Ostrov</span><span>Free and open source. Both run on macOS.</span></footer></div></body></html>'
 cat > index.html <<EOF
