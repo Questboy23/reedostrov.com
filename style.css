@@ -1,0 +1,51 @@
+:root{--bg:#f4f1ea;--ink:#16150f;--mute:#6b675c;--line:#d9d3c5;--card:#ebe6db;--accent:#b3401f;--max:1080px}
+@media (prefers-color-scheme:dark){:root{--bg:#121210;--ink:#ece8de;--mute:#9a958a;--line:#2c2a25;--card:#1b1a17;--accent:#e2724e}}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line);font-size:15px}
+header.top a{text-decoration:none}
+.name{font-weight:600;letter-spacing:-.01em}
+.mute{color:var(--mute)}
+.serif{font-family:"Fraunces",Georgia,serif;font-optical-sizing:auto;font-weight:350;letter-spacing:-.025em}
+.hero{padding:96px 0 72px}
+.hero h1{font-size:clamp(44px,8vw,96px);line-height:.98;max-width:12ch}
+.hero p{margin-top:28px;max-width:46ch;font-size:19px;color:var(--mute)}
+.label{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--mute)}
+.projects{border-top:1px solid var(--line);margin-bottom:96px}
+.projects .label{padding:20px 0}
+.row{display:grid;grid-template-columns:72px 1fr auto;gap:24px;align-items:center;padding:44px 0;border-top:1px solid var(--line);text-decoration:none;transition:padding .35s cubic-bezier(.2,.7,.2,1)}
+.row .n{font-size:15px;color:var(--mute);font-variant-numeric:tabular-nums}
+.row h2{font-size:clamp(40px,6.5vw,80px);line-height:1}
+.row p{margin-top:12px;color:var(--mute);max-width:48ch}
+.row .go{font-size:28px;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.row:hover{padding-left:12px}.row:hover .go{transform:translateX(8px);color:var(--accent)}
+.row:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+footer{border-top:1px solid var(--line);padding:28px 0 48px;font-size:14px;color:var(--mute);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* project page */
+.back{display:inline-block;margin-top:40px;font-size:15px;text-decoration:none;color:var(--mute)}.back:hover{color:var(--ink)}
+.p-hero{padding:56px 0 64px;border-bottom:1px solid var(--line)}
+.p-hero h1{font-size:clamp(52px,10vw,120px);line-height:.95}
+.p-hero .lede{margin-top:28px;font-size:clamp(20px,2.4vw,26px);line-height:1.4;max-width:30ch}
+.actions{margin-top:40px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);padding:16px 26px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px;transition:transform .2s,background .2s}
+.btn:hover{background:var(--accent);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.link{font-size:15px;color:var(--mute)}
+section.blk{display:grid;grid-template-columns:240px 1fr;gap:32px;padding:64px 0;border-bottom:1px solid var(--line)}
+section.blk h3{font-size:30px;line-height:1.1}
+.prose p+p{margin-top:16px}
+.prose{max-width:60ch;font-size:18px}
+ol.steps,ul.pros{list-style:none;padding:0;display:grid;gap:0}
+ul.pros li,ol.steps li{padding:22px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:40px 1fr;gap:12px}
+ul.pros li:first-child,ol.steps li:first-child{border-top:0;padding-top:0}
+ul.pros b,ol.steps b{display:block;font-weight:600}
+ul.pros span,ol.steps span{color:var(--mute)}
+.k{color:var(--accent);font-variant-numeric:tabular-nums;font-size:15px;padding-top:3px}
+code{font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--card);padding:2px 6px;border-radius:4px;word-break:break-all}
+pre{margin-top:12px;background:var(--card);padding:16px;border-radius:8px;overflow-x:auto}pre code{background:none;padding:0;word-break:normal}
+.note{margin-top:16px;font-size:15px;color:var(--mute)}
+@media (max-width:720px){.wrap{padding:0 16px}.hero{padding:64px 0 48px}.row{grid-template-columns:1fr auto;padding:32px 0}.row .n{grid-column:1/-1}section.blk{grid-template-columns:1fr;gap:16px;padding:44px 0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
