@@ -11,7 +11,7 @@
 
 <section class="blk glass"><h3 class="serif">How it works</h3><div class="prose feats">
 <p>The whole agent is one function called again and again: <code>next_action(goal, screen)</code>. It takes your goal and the current screen and returns exactly one action, such as &ldquo;click here&rdquo;, &ldquo;type this&rdquo; or &ldquo;done&rdquo;.</p>
-<h4>1. You give a goal</h4><p><b>In:</b> your voice while you hold Right Option, or text in the goal box. <b>Out:</b> one line of text. Speech becomes text on your Mac with whisper.cpp. The microphone is only on while you hold the key.</p>
+<h4>1. You give a goal</h4><p><b>In:</b> your voice (press Right Option to start, press it again to send), or text in the goal box. <b>Out:</b> one line of text. Speech becomes text on your Mac with whisper.cpp. The microphone is only on between the two presses.</p>
 <h4>2. It looks at the screen</h4><p><b>In:</b> the screen. <b>Out:</b> one small screenshot, kept in memory and never saved, plus the names of the buttons and fields macOS reports. Text on the screen is treated as data only. A web page that says &ldquo;ignore your user&rdquo; gets no say.</p>
 <h4>3. It picks one action</h4><p><b>In:</b> the goal and the screen. <b>Out:</b> one action in a strict format. Any reply that is not exactly one valid action is thrown away. Free mode asks a model on your Mac. Claude mode asks Claude.</p>
 <h4>4. Safety check</h4><p><b>In:</b> the action and what is on screen. <b>Out:</b> go, ask first, or blocked. Sending, deleting and settings changes need your yes. Password fields, payment fields, password managers, Keychain, System Settings and banking sites are always off limits.</p>
@@ -60,12 +60,12 @@ vca revoke    # cancel the grant at any time</code></pre>
 <li><span class="k">2</span><div><b>Install the free AI</b><span>Install Ollama from ollama.com, then run <code>ollama pull qwen3.5:9b</code> (about 8 GB).</span></div></li>
 <li><span class="k">3</span><div><b>Allow two permissions</b><span>In System Settings, Privacy &amp; Security, turn on Accessibility and Screen Recording for the app. It asks for nothing else.</span></div></li>
 <li><span class="k">4</span><div><b>Check it</b><span>Run <code>vca doctor</code>. It lists anything still missing.</span></div></li>
-<li><span class="k">5</span><div><b>Go</b><span>Hold Right Option and speak, or run <code>vca run --box</code> to type a goal.</span></div></li></ol></div></section>
+<li><span class="k">5</span><div><b>Go</b><span>Press Right Option, speak, press it again. Or run <code>vca run --box</code> to type a goal.</span></div></li></ol></div></section>
 
 <section class="blk glass"><h3 class="serif">Measured so far</h3><ul class="pros">
-<li><span class="k">01</span><div><b>127 automated tests pass</b><span>Covering the action format, safety checks, money block, overnight limits, kill switch and replay cache. 2 more need screen permission and were skipped.</span></div></li>
-<li><span class="k">02</span><div><b>Escape: 0 actions after 20 of 20 stops</b><span>Measured through the agent&rsquo;s real event path. A real Escape key press has not been tested yet.</span></div></li>
+<li><span class="k">01</span><div><b>148 automated tests pass</b><span>Covering the action format, safety checks, money block, overnight limits, kill switch, push-to-talk toggle and replay cache (including the safety check on every replayed step). 1 needs screen permission and was skipped.</span></div></li>
+<li><span class="k">02</span><div><b>Escape: 0 actions after 20 of 20 real key presses</b><span>Stop took 6 to 189 ms, median about 18 ms.</span></div></li>
 <li><span class="k">03</span><div><b>Free mode works offline</b><span>With all internet blocked, the local model returned a valid action 3 of 3 times, about 260 tokens each.</span></div></li>
-<li><span class="k">04</span><div><b>Not measured yet</b><span>Success rate on real everyday tasks. That needs 10 real tasks per mode on a Mac with the permissions granted.</span></div></li>
+<li><span class="k">04</span><div><b>Not measured yet</b><span>Success rate on 10 real everyday tasks per mode. The first free-mode attempt was thrown out: another app kept taking the front while it ran.</span></div></li>
 </ul></section>
 <footer><span>Reed Ostrov &middot; made in Ohio</span><span>free mode costs nothing &middot; macOS</span></footer></div></body></html>
