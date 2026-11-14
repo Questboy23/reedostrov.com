@@ -132,14 +132,14 @@ vca revoke    # cancel the grant at any time</code></pre>
 <section class="blk glass"><h3 class="serif">Free mode and Claude mode</h3><table class="vt"><tr><th></th><th>Free mode</th><th>Claude mode</th></tr>
 <tr><td>Where the AI runs</td><td>On your Mac (Ollama, Qwen 3.5 9B)</td><td>Anthropic&rsquo;s servers (Claude Sonnet)</td></tr>
 <tr><td>What leaves your Mac</td><td>Nothing. Tested with the internet blocked.</td><td>One shrunken screenshot and the button names per step</td></tr>
-<tr><td>Cost</td><td>&#36;0</td><td>Pay per use on your own Anthropic API key</td></tr>
-<tr><td>Speed per step</td><td>7 to 15 seconds once loaded (first call 83 s)</td><td>Not measured yet</td></tr>
+<tr><td>Cost</td><td>&#36;0</td><td>Counts against your Claude plan&rsquo;s usage limit, about 1,000 tokens per step on Haiku. No extra money.</td></tr>
+<tr><td>Speed per step</td><td>7 to 15 seconds once loaded (first call 83 s)</td><td>About 4.5 seconds (n=2 single calls)</td></tr>
 <tr><td>Best for</td><td>Simple, repeated tasks and private screens</td><td>Harder, unfamiliar tasks</td></tr></table>
 <p class="note">Other AI companies can plug in through the same provider interface: one class with one method.</p></section>
 
 <section class="blk glass"><h3 class="serif">Connecting it to Claude</h3><div><ol class="steps">
-<li><span class="k">1</span><div><b>Get an API key</b><span>Sign in at console.anthropic.com, open API Keys, and create a key.</span></div></li>
-<li><span class="k">2</span><div><b>Store it in your Keychain</b><span>Paste this into Terminal. It asks for the key, which never goes into a file or a log: <code>security add-generic-password -s voice-computer-agent-anthropic -a me -w</code></span></div></li>
+<li><span class="k">1</span><div><b>Install Claude Code</b><span>Install it from claude.com/code.</span></div></li>
+<li><span class="k">2</span><div><b>Sign in once</b><span>Run <code>claude</code> in Terminal and sign in with your Claude account. Claude mode then uses your plan&rsquo;s usage limit. No API key and no extra bill.</span></div></li>
 <li><span class="k">3</span><div><b>Say yes once</b><span>The first Claude-mode run explains what is sent and asks for your consent. Free mode never asks, because nothing leaves your Mac.</span></div></li>
 <li><span class="k">4</span><div><b>Run it</b><span><code>vca run --provider claude --mode auto --goal "get me to my Chrome extensions"</code></span></div></li></ol></div></section>
 
