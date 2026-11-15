@@ -89,8 +89,8 @@ mkdir -p voice-computer-agent
 cat > voice-computer-agent/index.html <<EOF
 $H<title>Voice Computer Agent</title><meta name="description" content="Tell your Mac what to do. Voice Computer Agent does it on screen while you watch, or in the background while you sleep, inside hard limits you set."><style>.vt{width:100%;border-collapse:collapse;font-size:15px}.vt th,.vt td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(128,128,128,.25);vertical-align:top}.vt th{font-weight:600}.dia{width:100%;height:auto;display:block;margin-top:8px}.dia text{font:13px "Instrument Sans",sans-serif;fill:currentColor}.dia .s{font-size:11px;opacity:.75}.dia rect{fill:none;stroke:currentColor;stroke-opacity:.45;rx:10}.dia .g{stroke:#3fbf6a;stroke-opacity:.9}.dia path{stroke:currentColor;stroke-opacity:.5;fill:none;marker-end:url(#ar)}pre{overflow-x:auto}</style></head><body>$TOP
 <nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
-<section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:#3fbf6a"></i>Project 03 &middot; macOS &middot; in testing</div><h1 class="serif" style="margin-top:16px">Voice Computer Agent</h1><p class="lede serif">Tell your Mac what to do. It does it on screen while you watch, or in the background while you sleep.</p>
-<p class="note">Not released yet. It is being tested on one Mac, and the download goes here when it is ready.</p></div>
+<section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:#3fbf6a"></i>Project 03 &middot; macOS &middot; early test build</div><h1 class="serif" style="margin-top:16px">Voice Computer Agent</h1><p class="lede serif">Tell your Mac what to do. It does it on screen while you watch, or in the background while you sleep.</p>
+<div class="actions"><a class="btn" href="/voice-computer-agent/VoiceComputerAgent.zip" download>Download for Mac <span aria-hidden="true">&darr;</span></a></div><p class="note">Early test build for macOS on Apple silicon. Free mode is still weak; Claude mode works best.</p></div>
 <figure class="win" aria-label="Example of the agent at work"><div class="bar"><i></i><i></i><i></i><span>Voice Computer Agent</span></div><pre class="scr"><span class="dim">You (holding Right Option):</span> get me to my Chrome extensions
 <b>Step 1  click  the puzzle piece icon</b>
 <b>Step 2  click  Manage extensions</b>
@@ -144,12 +144,13 @@ vca revoke    # cancel the grant at any time</code></pre>
 <li><span class="k">3</span><div><b>Say yes once</b><span>The first Claude-mode run explains what is sent and asks for your consent. Free mode never asks, because nothing leaves your Mac.</span></div></li>
 <li><span class="k">4</span><div><b>Run it</b><span><code>vca run --provider claude --mode auto --goal "get me to my Chrome extensions"</code></span></div></li></ol></div></section>
 
-<section class="blk glass"><h3 class="serif">How to install (once released)</h3><div><ol class="steps">
-<li><span class="k">1</span><div><b>Download and unzip</b><span>The download button appears at the top of this page at release.</span></div></li>
-<li><span class="k">2</span><div><b>Install the free AI</b><span>Install Ollama from ollama.com, then run <code>ollama pull qwen3.5:9b</code> (about 8 GB).</span></div></li>
-<li><span class="k">3</span><div><b>Allow two permissions</b><span>In System Settings, Privacy &amp; Security, turn on Accessibility and Screen Recording for the app. It asks for nothing else.</span></div></li>
-<li><span class="k">4</span><div><b>Check it</b><span>Run <code>vca doctor</code>. It lists anything still missing.</span></div></li>
-<li><span class="k">5</span><div><b>Go</b><span>Press Right Option, speak, press it again. Or run <code>vca run --box</code> to type a goal.</span></div></li></ol></div></section>
+<section class="blk glass"><h3 class="serif">How to install</h3><div><ol class="steps">
+<li><span class="k">1</span><div><b>Download and unzip</b><span>Click Download for Mac above. Your Mac unzips it into Downloads.</span></div></li>
+<li><span class="k">2</span><div><b>Get the tools</b><span>Install Homebrew from brew.sh, then run <code>brew install uv cmake</code> in Terminal.</span></div></li>
+<li><span class="k">3</span><div><b>Run the installer</b><span>Type <code>bash </code> with a space, drag <code>install.sh</code> from the unzipped folder into Terminal, and press Return. It adds the menu bar ring and starts it at login.</span></div></li>
+<li><span class="k">4</span><div><b>Allow permissions</b><span>System Settings, Privacy &amp; Security: turn on Accessibility and Screen Recording for Voice Computer Agent. Under Menu Bar, allow it so the ring shows.</span></div></li>
+<li><span class="k">5</span><div><b>Optional free AI</b><span>Install Ollama from ollama.com, then run <code>ollama pull qwen3.5:9b</code> (about 8 GB).</span></div></li>
+<li><span class="k">6</span><div><b>Go</b><span>Click the ring, then Check setup. Then press Right Option, speak, and press it again. Escape stops it.</span></div></li></ol></div></section>
 
 <section class="blk glass"><h3 class="serif">Measured so far</h3><ul class="pros">
 <li><span class="k">01</span><div><b>148 automated tests pass</b><span>Covering the action format, safety checks, money block, overnight limits, kill switch, push-to-talk toggle and replay cache (including the safety check on every replayed step). 1 needs screen permission and was skipped.</span></div></li>
