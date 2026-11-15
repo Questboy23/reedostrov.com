@@ -76,7 +76,7 @@ pre code{background:none;border:0;padding:0;word-break:normal}
 section.blk>*,.split>*{min-width:0}
 /* Ideas from freakysite: graph paper, light wash, card sheen, muted vintage inks, book serif body. */
 :root{--bg:#fbf3df;--ink:#2e2822;--mute:#6f6457;--line:#e2d3ad;--card:#fffcf3;--accent:#8f3b34;--sea:#5f7548;--mustard:#c39435;--hatch:rgba(214,186,120,.24);--sheen:rgba(255,255,255,.45);--wash:rgba(255,251,228,.8);--body:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--max:880px}
-@media (prefers-color-scheme:dark){:root{--bg:#3a2f24;--ink:#fbf0dc;--mute:#d8c6a6;--line:#6a5843;--card:#46392b;--accent:#f2946e;--sea:#a6c98e;--mustard:#f2c35e;--hl:#8a6a2a;--hatch:rgba(255,214,150,.07);--sheen:rgba(255,236,200,.06);--wash:rgba(255,196,120,.12)}}
+@media (prefers-color-scheme:dark){:root{--bg:#44362a;--ink:#fdf2e0;--mute:#e0cbaa;--line:#76604a;--card:#514132;--accent:#f28a4c;--sea:#a6c98e;--mustard:#f2c35e;--hl:#9a5a2a;--hatch:rgba(255,190,130,.07);--sheen:transparent;--wash:transparent}}
 body{font-family:var(--body);font-size:17px;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;background-color:var(--bg);background-image:radial-gradient(ellipse 130% 70% at 50% -5%,var(--wash),transparent 62%),repeating-linear-gradient(0deg,transparent 0 27px,var(--hatch) 27px 28px),repeating-linear-gradient(90deg,transparent 0 27px,var(--hatch) 27px 28px);background-attachment:fixed}
 body::before{mix-blend-mode:multiply;opacity:.1}
 @media (prefers-color-scheme:dark){body::before{mix-blend-mode:overlay;opacity:.06}}
@@ -155,7 +155,7 @@ section.blk h3::after{content:"";display:block;width:38px;border-top:3px double 
 .btn:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -2px 0 rgba(0,0,0,.18),3px 3px 0 var(--line)}
 .btn:active{box-shadow:inset 0 2px 3px rgba(0,0,0,.3)}
 .win pre.scr{background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.04) 0 1px,transparent 1px 3px)}
-@media (prefers-color-scheme:dark){.win pre.scr{text-shadow:0 0 6px color-mix(in srgb,var(--mustard) 30%,transparent)}}
+
 .k{font-size:14px}
 .prose a,.note a,.link{text-decoration-thickness:1px;text-underline-offset:3px}
 /* colophon */
