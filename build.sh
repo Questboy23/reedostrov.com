@@ -1,8 +1,8 @@
 #!/bin/bash
 # Builds the three pages from shared header and footer.
 cd "$(dirname "$0")"
-H='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,0..100,0..1&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=8">'
-TOP='<div class="wrap"><header class="top"><a class="name" href="/">Reed Ostrov</a><a class="mute mono" href="https://github.com/Questboy23">github &#8599;</a></header>'
+H='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,0..100,0..1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=9">'
+TOP='<div class="wrap"><header class="top"><a class="name" href="/">Reed Ostrov</a><span class="motto">small, honest tools for the Mac</span><a class="mute mono" href="https://github.com/Questboy23">github &#8599;</a></header>'
 FOOT='<footer><span>Reed Ostrov &middot; made in Ohio</span><span>free &amp; open source &middot; macOS</span></footer></div></body></html>'
 
 cat > index.html <<EOF
@@ -11,6 +11,7 @@ $H<title>Reed Ostrov</title><meta name="description" content="Reed Ostrov's proj
 <a class="card glass lev" href="/leviathan/"><span class="icon lev"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg></span><h2>Leviathan</h2><p>Stops malware on your Mac before it runs.</p><span class="pill">Learn more &rarr;</span></a>
 <a class="card glass am" href="/activity-monitored/"><span class="icon am"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 4a10 10 0 0 0-10 10c0 1.7.4 3.3 1.2 4.7l1.7-1A8 8 0 1 1 20 14c0 1.4-.4 2.7-1 3.8l1.7 1A10 10 0 0 0 12 4zm4.2 4.4-5.6 4.4a2 2 0 1 0 2.8 2.8l2.8-7.2z"/></svg></span><h2>Activity Monitored</h2><p>Keeps your Mac fast when it is overloaded.</p><span class="pill">Learn more &rarr;</span></a>
 <a class="card glass" href="/voice-computer-agent/"><span class="icon" style="background:#2f9e57"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1a7 7 0 0 0 6-6.9h-2z"/></svg></span><h2>Voice Computer Agent</h2><p>Tell your Mac what to do, and it does it.</p><span class="pill">Learn more &rarr;</span></a>
+<div class="card stub" aria-hidden="true"><span class="serif">More on the workbench&hellip;</span></div>
 </div></main>$FOOT
 EOF
 

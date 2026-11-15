@@ -7,7 +7,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;z
 .wrap{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 24px}
 a{color:inherit}
 .serif{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-weight:420;letter-spacing:-.015em}
-.mono,.label{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.mono,.label{font-family:"Courier Prime","IBM Plex Mono",ui-monospace,monospace}
 .mute{color:var(--mute)}
 header.top{display:flex;justify-content:space-between;align-items:center;padding:26px 0;border-bottom:1.5px dashed var(--line);font-size:15px}
 header.top a{text-decoration:none}
@@ -23,7 +23,7 @@ h1.label{font-weight:500}
 .projects .label{padding:0 0 18px}
 .row{display:grid;grid-template-columns:64px 1fr auto;gap:22px;align-items:center;padding:34px 30px;margin-bottom:22px;text-decoration:none;background:var(--card);border:1.5px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);position:relative;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s cubic-bezier(.2,.7,.2,1)}
 .row::before{content:"";position:absolute;left:-1.5px;top:22px;bottom:22px;width:6px;border-radius:0 6px 6px 0;background:var(--c,var(--accent))}
-.row .n{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:500 14px "IBM Plex Mono",monospace;border:1.5px solid var(--ink);background:var(--c,var(--accent));color:var(--card)}
+.row .n{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:500 14px "Courier Prime","IBM Plex Mono",monospace;border:1.5px solid var(--ink);background:var(--c,var(--accent));color:var(--card)}
 .row h2{font-size:clamp(36px,6vw,64px);line-height:1}
 .row p{margin-top:10px;color:var(--mute);max-width:46ch}
 .row .go{font-size:26px;transition:transform .25s}
@@ -31,10 +31,10 @@ h1.label{font-weight:500}
 .row:hover .go{transform:translateX(6px);color:var(--c,var(--accent))}
 .row:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
 .row:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-.tag{display:inline-block;margin-left:10px;vertical-align:middle;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border:1.5px solid var(--ink);border-radius:999px;background:var(--hl);color:var(--ink);transform:rotate(-4deg)}
-footer{border-top:1.5px dashed var(--line);padding:26px 0 48px;font-size:14px;color:var(--mute);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace}
+.tag{display:inline-block;margin-left:10px;vertical-align:middle;font:500 11px "Courier Prime","IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border:1.5px solid var(--ink);border-radius:999px;background:var(--hl);color:var(--ink);transform:rotate(-4deg)}
+footer{border-top:1.5px dashed var(--line);padding:26px 0 48px;font-size:14px;color:var(--mute);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:"Courier Prime","IBM Plex Mono",monospace}
 /* project page */
-.back{display:inline-block;margin-top:36px;font:14px "IBM Plex Mono",monospace;text-decoration:none;color:var(--mute)}.back:hover{color:var(--ink)}
+.back{display:inline-block;margin-top:36px;font:14px "Courier Prime","IBM Plex Mono",monospace;text-decoration:none;color:var(--mute)}.back:hover{color:var(--ink)}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:0;border:1.5px solid var(--ink)}
 .p-hero{padding:44px 0 60px;border-bottom:1.5px dashed var(--line)}
 .p-hero h1{font-size:clamp(52px,10vw,112px);line-height:.95}
@@ -52,8 +52,8 @@ ul.pros li,ol.steps li{padding:20px 0;border-top:1.5px dashed var(--line);displa
 ul.pros li:first-child,ol.steps li:first-child{border-top:0;padding-top:0}
 ul.pros b,ol.steps b{display:block;font-weight:600}
 ul.pros span,ol.steps span{color:var(--mute)}
-.k{font:500 13px "IBM Plex Mono",monospace;color:var(--accent);padding-top:4px}
-code{font:14px/1.5 "IBM Plex Mono",ui-monospace,monospace;background:var(--card);border:1px solid var(--line);padding:1px 6px;border-radius:5px;word-break:break-all}
+.k{font:500 13px "Courier Prime","IBM Plex Mono",monospace;color:var(--accent);padding-top:4px}
+code{font:14px/1.5 "Courier Prime","IBM Plex Mono",ui-monospace,monospace;background:var(--card);border:1px solid var(--line);padding:1px 6px;border-radius:5px;word-break:break-all}
 pre{margin-top:12px;background:var(--card);border:1.5px solid var(--ink);border-radius:12px;padding:16px;overflow-x:auto;box-shadow:3px 3px 0 var(--ink)}
 pre code{background:none;border:0;padding:0;word-break:normal}
 .note{margin-top:16px;font-size:15px;color:var(--mute)}
@@ -61,14 +61,14 @@ pre code{background:none;border:0;padding:0;word-break:normal}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .hello{font-size:clamp(30px,4vw,40px);margin-bottom:10px}
 .chips{list-style:none;padding:0;margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
-.chips li{font:500 12px "IBM Plex Mono",monospace;padding:4px 10px;border:1.5px dashed var(--line);border-radius:999px;color:var(--mute)}
+.chips li{font:500 12px "Courier Prime","IBM Plex Mono",monospace;padding:4px 10px;border:1.5px dashed var(--line);border-radius:999px;color:var(--mute)}
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .win{margin:0;background:var(--card);border:1.5px solid var(--ink);border-radius:14px;box-shadow:5px 5px 0 var(--ink);overflow:hidden;transform:rotate(1.2deg)}
 .win .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1.5px solid var(--ink);background:var(--hl)}
 .win .bar i{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--ink);background:var(--card)}
 .win .bar i:first-child{background:var(--accent)}
-.win .bar span{margin-left:8px;font:500 12px "IBM Plex Mono",monospace}
-.win pre.scr{margin:0;border:0;box-shadow:none;border-radius:0;font:13px/1.7 "IBM Plex Mono",monospace;white-space:pre-wrap;padding:18px}
+.win .bar span{margin-left:8px;font:500 12px "Courier Prime","IBM Plex Mono",monospace}
+.win pre.scr{margin:0;border:0;box-shadow:none;border-radius:0;font:13px/1.7 "Courier Prime","IBM Plex Mono",monospace;white-space:pre-wrap;padding:18px}
 .scr b{color:var(--accent);font-weight:500}.scr .dim{color:var(--mute)}
 .meter{display:inline-block;width:110px;height:10px;border:1.5px solid var(--ink);border-radius:3px;vertical-align:-1px;overflow:hidden}.meter i{display:block;height:100%;background:var(--mustard)}
 .feats h4{font:600 18px "Instrument Sans",sans-serif;margin-top:28px}.feats h4:first-child{margin-top:0}.feats p{margin-top:6px}
@@ -94,14 +94,14 @@ main.home h1.label{margin:0 0 14px 2px}
 .icon{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--ink);box-shadow:2px 2px 0 var(--line)}
 .icon svg{width:26px;height:26px}
 .icon.lev{background:var(--sea)}.icon.am{background:var(--mustard)}
-.pill{margin-top:auto;padding-top:10px;font:500 12px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.pill{margin-top:auto;padding-top:10px;font:500 12px "Courier Prime","IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
 .card:hover .pill{text-decoration:underline;text-underline-offset:3px}
 /* project pages: sections as printed cards */
 .p-hero{padding:32px;margin-bottom:18px;border-bottom:1px solid var(--line)}
 .p-hero h1{font-size:clamp(44px,7vw,80px)}
 section.blk{padding:28px 32px;margin-bottom:18px;grid-template-columns:200px 1fr;border-bottom:1px solid var(--line)}
 section.blk h3{font-size:24px}
-.btn{background:var(--accent);border:1px solid var(--ink);border-radius:11px;box-shadow:2px 2px 0 var(--line);font:500 13px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;padding:14px 22px}
+.btn{background:var(--accent);border:1px solid var(--ink);border-radius:11px;box-shadow:2px 2px 0 var(--line);font:500 13px "Courier Prime","IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;padding:14px 22px}
 .btn:hover{box-shadow:3px 3px 0 var(--line)}
 .win{transform:rotate(.8deg);box-shadow:0 1px 0 var(--line),0 14px 30px rgba(90,60,45,.14);border-color:var(--line)}
 .win .bar{background:var(--bg);border-bottom-color:var(--line)}
@@ -110,7 +110,7 @@ ul.pros li,ol.steps li{border-top-style:solid}
 @media (max-width:720px){.grid{grid-template-columns:1fr;gap:14px}.card{padding:20px}.p-hero{padding:24px 20px}section.blk{padding:22px 20px;grid-template-columns:1fr}}
 /* back link + download button fix */
 .crumb{margin:22px 0 16px}
-.back{display:inline-flex;align-items:center;gap:8px;margin:0;padding:8px 14px;background:var(--card);border:1px solid var(--line);border-radius:999px;font:500 12px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-decoration:none;box-shadow:1px 1px 0 var(--line);transition:color .15s,border-color .15s}
+.back{display:inline-flex;align-items:center;gap:8px;margin:0;padding:8px 14px;background:var(--card);border:1px solid var(--line);border-radius:999px;font:500 12px "Courier Prime","IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-decoration:none;box-shadow:1px 1px 0 var(--line);transition:color .15s,border-color .15s}
 .back:hover{color:var(--ink);border-color:var(--ink)}
 .back span{transition:transform .15s}.back:hover span{transform:translateX(-3px)}
 .btn,.btn:hover,.btn:active{transform:none}
@@ -118,4 +118,57 @@ ul.pros li,ol.steps li{border-top-style:solid}
 .btn:hover{background:#7a302a;box-shadow:3px 3px 0 var(--line)}
 .btn:active{box-shadow:0 0 0 var(--line)}
 .btn:focus-visible,.back:focus-visible{outline:2px solid var(--mustard);outline-offset:3px}
-.actions{align-items:center}.size{font:12px "IBM Plex Mono",monospace;color:var(--mute);margin-left:-8px}
+.actions{align-items:center}.size{font:12px "Courier Prime","IBM Plex Mono",monospace;color:var(--mute);margin-left:-8px}
+/* v9 retro print layer: masthead rules, catalog cards, fleurons, letterpress, vignette. Ideas from tufte-css (oldstyle figures, small caps) and Courier Prime. */
+:root{--fleuron:"\2766";--vig:rgba(70,45,20,.13);--emb:rgba(255,255,255,.55)}
+@media (prefers-color-scheme:dark){:root{--vig:rgba(0,0,0,.42);--emb:rgba(0,0,0,.55)}}
+body{font-variant-numeric:oldstyle-nums proportional-nums;font-kerning:normal}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 120% 90% at 50% 40%,transparent 55%,var(--vig))}
+::selection{background:var(--mustard);color:#2a2118}
+.mono,.label,code,pre,.pill,.back,.btn,footer{font-variant-numeric:lining-nums}
+/* masthead */
+header.top{border-bottom:3px double var(--line);padding:24px 0 20px;gap:16px}
+.name{font-size:25px;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144;text-shadow:0 1px 0 var(--emb)}
+.motto{font:italic 15px var(--body);color:var(--mute);letter-spacing:.01em;margin-right:auto;padding-left:14px;border-left:1px solid var(--line)}
+/* section label with printer's ornament */
+main.home h1.label{display:flex;align-items:center;gap:12px;margin:0 0 18px}
+main.home h1.label::before{content:var(--fleuron);font:18px Georgia,serif;letter-spacing:0;color:var(--accent);text-transform:none}
+main.home h1.label::after{content:"";flex:1;border-top:1px solid var(--line);box-shadow:0 2px 0 -1px var(--line);height:3px}
+/* catalog cards */
+.grid{counter-reset:card;gap:24px}
+.card{position:relative;counter-increment:card;outline:1px solid var(--line);outline-offset:-7px;padding:28px 28px 26px;rotate:-.35deg;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,rotate .3s}
+.card:nth-child(even){rotate:.4deg}
+.card:hover{rotate:0deg}
+.card::after{content:"No. " counter(card,decimal-leading-zero);position:absolute;top:18px;right:22px;font:13px "Courier Prime","IBM Plex Mono",monospace;color:var(--mute);letter-spacing:.06em}
+.card h2{font-size:32px;text-shadow:0 1px 0 var(--emb)}
+.card p{font-style:italic}
+.icon{box-shadow:3px 3px 0 color-mix(in srgb,var(--accent) 45%,transparent);border-color:var(--ink)}
+.card:hover .icon{box-shadow:4px 4px 0 color-mix(in srgb,var(--accent) 60%,transparent)}
+.pill{font-size:13px;letter-spacing:.12em}
+/* project pages */
+.p-hero{outline:1px solid var(--line);outline-offset:-7px}
+.p-hero h1{text-shadow:0 1px 0 var(--emb);font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+.lede{font-style:italic}
+section.blk h3::after{content:"";display:block;width:38px;border-top:3px double var(--accent);margin-top:12px}
+.p-hero+section.blk .prose>p:first-child::first-letter{float:left;font:500 3.6em/.82 "Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;padding:5px 9px 0 0;color:var(--accent)}
+.btn{box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -2px 0 rgba(0,0,0,.18),2px 2px 0 var(--line);text-shadow:0 1px 0 rgba(0,0,0,.28);font-size:14px}
+.btn:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -2px 0 rgba(0,0,0,.18),3px 3px 0 var(--line)}
+.btn:active{box-shadow:inset 0 2px 3px rgba(0,0,0,.3)}
+.win pre.scr{background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.04) 0 1px,transparent 1px 3px)}
+@media (prefers-color-scheme:dark){.win pre.scr{text-shadow:0 0 6px color-mix(in srgb,var(--mustard) 30%,transparent)}}
+.k{font-size:14px}
+.prose a,.note a,.link{text-decoration-thickness:1px;text-underline-offset:3px}
+/* colophon */
+footer{border-top:3px double var(--line);align-items:center}
+footer::before{content:var(--fleuron);order:1;font:18px Georgia,serif;color:var(--accent)}
+footer>span:last-child{order:2}
+/* gentle settle-in on load */
+@keyframes settle{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+main>*,main .card{animation:settle .6s cubic-bezier(.2,.7,.2,1) both}
+main .card:nth-child(2){animation-delay:.08s}main .card:nth-child(3){animation-delay:.16s}main .card:nth-child(4){animation-delay:.24s}
+@media (max-width:720px){.motto{display:none}.card{rotate:0deg}.card::after{top:16px;right:18px}footer{justify-content:center;text-align:center}footer::before{order:0;width:100%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.card.stub{counter-increment:none;background:none;box-shadow:none;border:1.5px dashed var(--line);outline:0;justify-content:center;align-items:center;color:var(--mute);font-size:20px;font-style:italic;rotate:.6deg;min-height:120px}
+.card.stub::after{content:none}
+.grid>.card.stub:nth-child(even){display:flex}.grid>.card.stub:nth-child(odd){display:none}
+@media (max-width:720px){.grid>.card.stub:nth-child(even){display:none}}
