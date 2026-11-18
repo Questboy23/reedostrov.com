@@ -30,7 +30,7 @@ straight away. Scam pages ask for this.
 
 <section class="blk glass"><h3 class="serif">How it works</h3><div class="prose feats">
 <h4>1. Untrusted apps open in a Safe Box</h4><p>When you download an app that Apple never checked, which covers most cracked and pirated apps, Leviathan moves it into a box and leaves a launcher with the same name and icon. You open it as usual. Inside the box it cannot see your files, browser data, passwords, keychain or crypto wallets, cannot show a fake password box, and cannot set itself to start at login. One command takes it out again.</p>
-<h4>2. Harmful downloads get locked away</h4><p>New files in Downloads and new apps are checked with the same malware rules Apple ships in macOS, plus Apple&rsquo;s list of developers it has banned. A match moves to a locked folder where it cannot open. You can put it back for 7 days.</p>
+<h4>2. Harmful downloads get locked away</h4><p>New files in Downloads and new apps are checked with the same malware rules Apple ships in macOS, plus Apple&rsquo;s list of developers it has banned. A match goes to the Trash with its permission to run removed, so it cannot open even from there. One command puts it back.</p>
 <h4>3. Bad websites never load</h4><p>A standard macOS profile sends every website lookup, encrypted, to Quad9 (9.9.9.9). Known malware and phishing sites fail to load, in every app. Legal sites stay open.</p>
 <h4>4. Pasted scam commands and fake password boxes get stopped</h4><p>A popular scam asks you to paste a line into Terminal to &ldquo;fix&rdquo; something. Leviathan stops those commands once and explains the risk. It also closes pop-ups that ask for your Mac password, and switches off malware that hides in your startup items.</p>
 <h4>5. AI agents work in a box</h4><p>Start an agent with <code>leviathan agents run -- claude</code> and it can work on your project and nothing else: no SSH keys, browser data, keychains, wallets or Documents. With &ldquo;Watch AI agents&rdquo; on, fake secret files sit on your Mac; one carries a planted instruction, and an agent that obeys it is paused and named. Every event can be exported for AI safety research, with your home folder hidden.</p>
@@ -49,7 +49,7 @@ straight away. Scam pages ask for this.
 <li><span class="k">2</span><div><b>Open Terminal</b><span>Press Cmd and Space, type Terminal, press Return.</span></div></li>
 <li><span class="k">3</span><div><b>Run the installer</b><span>Type <code>bash </code> with a space, drag <code>install.sh</code> from the unzipped folder into the window, and press Return. No password needed.</span></div></li>
 <li><span class="k">4</span><div><b>Turn on the website filter</b><span>System Settings opens at the end. Double-click Leviathan website filter, click Install, and enter your Mac password.</span></div></li>
-</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v3.0.0.tar.gz | tar xz &amp;&amp; bash leviathan-3.0.0/install.sh</code></pre></div></section>
+</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v3.0.1.tar.gz | tar xz &amp;&amp; bash leviathan-3.0.1/install.sh</code></pre></div></section>
 $FOOT
 EOF
 
