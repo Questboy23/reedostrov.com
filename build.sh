@@ -48,7 +48,7 @@ straight away. Scam pages ask for this.
 <li><span class="k">1</span><div><b>Download</b><span>Click Download for Mac above, then double-click the zip in your Downloads folder to unzip it.</span></div></li>
 <li><span class="k">2</span><div><b>Open Terminal</b><span>Press Cmd and Space, type Terminal, press Return.</span></div></li>
 <li><span class="k">3</span><div><b>Run the installer</b><span>Type <code>bash </code> with a space, drag <code>install.sh</code> from the unzipped folder into the window, and press Return. Enter your Mac password when asked; the website filter needs it once.</span></div></li>
-</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v2.0.8.tar.gz | tar xz &amp;&amp; bash leviathan-2.0.8/install.sh</code></pre></div></section>
+</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v2.0.9.tar.gz | tar xz &amp;&amp; bash leviathan-2.0.9/install.sh</code></pre></div></section>
 $FOOT
 EOF
 
