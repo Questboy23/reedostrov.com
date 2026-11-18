@@ -49,7 +49,7 @@ straight away. Scam pages ask for this.
 <li><span class="k">2</span><div><b>Open Terminal</b><span>Press Cmd and Space, type Terminal, press Return.</span></div></li>
 <li><span class="k">3</span><div><b>Run the installer</b><span>Type <code>bash </code> with a space, drag <code>install.sh</code> from the unzipped folder into the window, and press Return. No password needed.</span></div></li>
 <li><span class="k">4</span><div><b>Turn on the website filter</b><span>System Settings opens at the end. Double-click Leviathan website filter, click Install, and enter your Mac password.</span></div></li>
-</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v2.1.0.tar.gz | tar xz &amp;&amp; bash leviathan-2.1.0/install.sh</code></pre></div></section>
+</ol><p class="note">Or paste this single line into Terminal:</p><pre><code>cd ~ &amp;&amp; curl -fsSL https://github.com/Questboy23/leviathan/archive/refs/tags/v2.1.1.tar.gz | tar xz &amp;&amp; bash leviathan-2.1.1/install.sh</code></pre></div></section>
 $FOOT
 EOF
 
@@ -69,7 +69,7 @@ $H<title>Activity Monitored</title><meta name="description" content="Activity Mo
 
 <section class="blk glass"><h3 class="serif">How it works</h3><div class="prose feats">
 <h4>1. It watches the load</h4><p>Every 3 seconds it checks how hard the processor is working and which programs are using it most. If there is spare room, it does nothing at all.</p>
-<h4>2. It lowers busy background programs</h4><p>When the Mac is overloaded, it moves the heaviest background programs to macOS&rsquo;s low priority lane, the same one macOS uses for its own background chores. Nothing is paused and no work is lost. The only program it ever closes is a browser tab using over 3 GB when memory has run out completely; the tab reloads.</p>
+<h4>2. It lowers busy background programs</h4><p>When the Mac is overloaded, it moves the heaviest background programs to macOS&rsquo;s low priority lane, the same one macOS uses for its own background chores. Nothing is paused and no work is lost. It never closes or deletes anything.</p>
 <h4>3. It always puts things back</h4><p>Every change starts its own 90 second timer that reverses it automatically. The timer runs separately, so even if Activity Monitored crashes or you remove it, your programs still return to normal. Every change is also written to a log you can read.</p>
 <h4>4. It warns you about what it cannot fix</h4><p>A nearly full disk or exhausted memory can freeze every app, and lowering priority does not help. When free disk space drops below 20 GB or memory stays full, it shows a Mac notification naming the cause, at most once every 30 minutes. It never closes anything for you.</p></div></section>
 
