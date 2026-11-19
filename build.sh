@@ -79,7 +79,7 @@ $H<title>Activity Monitored</title><meta name="description" content="Activity Mo
 <section class="blk glass"><h3 class="serif">Why it&rsquo;s useful</h3><ul class="pros">
 <li><span class="k">01</span><div><b>The app you&rsquo;re using stays smooth</b><span>Typing, scrolling and video keep up even while heavy work runs behind them.</span></div></li>
 <li><span class="k">02</span><div><b>Heavy jobs can even finish sooner</b><span>In one overload test on one Mac, a 10 program job finished in 24 seconds instead of 39.</span></div></li>
-<li><span class="k">03</span><div><b>Programs keep running</b><span>Programs are only slowed or paused for a while and keep their work. It never quits or deletes anything.</span></div></li>
+<li><span class="k">03</span><div><b>Apps keep running</b><span>Apps are only slowed or paused for a while and keep their work. Nothing is deleted. A background script holding gigabytes of swap on a nearly full disk can be ended, and its command is saved to rerun.</span></div></li>
 <li><span class="k">04</span><div><b>Free, private, no account</b><span>No subscription, no sign up, and no data leaves your Mac.</span></div></li>
 </ul></section>
 
