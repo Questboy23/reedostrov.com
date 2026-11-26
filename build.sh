@@ -12,6 +12,7 @@ $H<title>Reed Ostrov</title><meta name="description" content="Reed Ostrov's proj
 <a class="card glass am" href="/activity-monitored/"><span class="icon am"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 4a10 10 0 0 0-10 10c0 1.7.4 3.3 1.2 4.7l1.7-1A8 8 0 1 1 20 14c0 1.4-.4 2.7-1 3.8l1.7 1A10 10 0 0 0 12 4zm4.2 4.4-5.6 4.4a2 2 0 1 0 2.8 2.8l2.8-7.2z"/></svg></span><h2>Activity Monitored</h2><p>Stops the out-of-memory window that pauses your apps.</p><span class="pill">Learn more &rarr;</span></a>
 <a class="card glass" href="/voice-computer-agent/"><span class="icon" style="background:#2f9e57"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1a7 7 0 0 0 6-6.9h-2z"/></svg></span><h2>Voice Computer Agent</h2><p>Tell your Mac what to do, and it does it.</p><span class="pill">Learn more &rarr;</span></a>
 <a class="card glass" href="/tone/"><span class="icon" style="background:#c9a14a"><svg viewBox="0 0 24 24" fill="none" stroke="#f8f2e6" stroke-width="2.2" stroke-linecap="round"><path d="M2 12h2l2-6 3 12 3-15 3 18 3-12 2 3h2"/></svg></span><h2>Tone</h2><p>Learn any instrument&rsquo;s sound from a song. Play it, swap it, export it.</p><span class="pill">Open &rarr;</span></a>
+<a class="card glass" href="/ic/"><span class="icon" style="background:#0f6c7a"><svg viewBox="0 0 24 24" fill="#f8f2e6"><path d="M6 2h8l4 4v6h-2V7h-3V4H6v16h5v2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm10 12 4 4-4 4v-3h-4v-2h4v-3z"/></svg></span><h2>IC</h2><p>Makes your files smaller. Opens them back exactly the same.</p><span class="pill">Learn more &rarr;</span></a>
 
 </div><h1 class="label" style="margin-top:56px">Links</h1><ul class="links"><li><a href="https://github.com/Questboy23"><b>GitHub</b><span>Questboy23</span></a></li><li><a href="https://www.linkedin.com/in/reedostrov"><b>LinkedIn</b><span>reedostrov</span></a></li><li><a href="https://www.instagram.com/reedostrov"><b>Instagram</b><span>@reedostrov</span></a></li><li><a href="mailto:personguy976@gmail.com"><b>Email</b><span>personguy976<wbr>@gmail.com</span></a></li></ul></main>$FOOT
 EOF
@@ -154,5 +155,42 @@ vca revoke    # cancel the grant at any time</code></pre>
 <li><span class="k">03</span><div><b>Free mode works offline</b><span>With all internet blocked, the local model returned a valid action 3 of 3 times, about 260 tokens each.</span></div></li>
 <li><span class="k">04</span><div><b>Not measured yet</b><span>Success rate on 10 real everyday tasks per mode. The first free-mode attempt was thrown out: another app kept taking the front while it ran.</span></div></li>
 </ul></section>
+$FOOT
+EOF
+
+mkdir -p ic
+cat > ic/index.html <<EOF
+$H<title>IC</title><meta name="description" content="IC makes files on your Mac smaller and opens them back exactly the same."><style>.vt{width:100%;border-collapse:collapse;font-size:15px}.vt th,.vt td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(128,128,128,.25);vertical-align:top}.vt th{font-weight:600}.vt td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.tw{overflow-x:auto}.q{font-family:Fraunces,serif;font-style:italic}</style></head><body>$TOP
+<nav class="crumb"><a class="back" href="/"><span aria-hidden="true">&larr;</span> All projects</a></nav>
+<section class="p-hero split glass"><div><div class="label"><i class="dot" style="background:#0f6c7a"></i>Project 05 &middot; macOS &middot; v1.0</div><h1 class="serif" style="margin-top:16px">IC</h1><p class="lede serif">Your files, smaller. Double-click one and it opens back exactly the same, byte for byte.</p>
+<div class="actions"><a class="btn" href="https://github.com/Questboy23/reedostrov.com/releases/download/ic-v1.0/IC.dmg">Download for Mac <span aria-hidden="true">&darr;</span></a></div><p class="note">IC.dmg, 114 MB. Apple Silicon Macs with macOS 26 or newer. Open it and double-click <b>Install IC.command</b>. The first time, macOS blocks it because it is not from the App Store: open System Settings, Privacy &amp; Security, scroll down, click <b>Open Anyway</b>, then double-click it again. No password needed.</p></div>
+<figure class="win" aria-label="Example of saving a file with IC"><div class="bar"><i></i><i></i><i></i><span>Finder &rsaquo; Save as .ic</span></div><pre class="scr"><span class="dim">report.pdf</span>        4.27 MB
+<b>report.pdf.ic</b>     1.53 MB   <span class="dim">64% smaller</span>
+<span class="dim">double-click:</span>    report.pdf, identical</pre></figure></section>
+
+<section class="blk glass"><h3 class="serif">What it does</h3><div class="prose"><p>Your Mac already has files that could be much smaller without losing anything. IC packs each one with whichever free, well-known packing tool shrinks that file the most, and remembers which tool it used. When you open the file, IC runs that tool backward and you get the exact original.</p><p>If packing a file would save less than about half a percent, IC leaves it alone.</p></div></section>
+
+<section class="blk glass"><h3 class="serif">How it works</h3><div class="prose feats">
+<h4>1. A bunch of algorithms stored on your computer</h4><p>The download carries 17 existing packing tools. A packed file never carries a tool. It keeps a label of about 100 bytes that names the tool and its settings.</p>
+<h4>2. It picks the best way per file</h4><p>4 tools race on each file at the same time, and the smallest result wins. Photos, music, text and PDFs each get the tools that suit them. Big files get a quick test on 4 small slices first, so slow tools only run when they might win.</p>
+<h4>3. It improves itself</h4><p>Every night it keeps score of which tool won for each kind of file and stops trying tools that never win. That cut its work by 35% with no size lost.</p>
+<h4>4. It builds its own algorithms</h4><p>Once a week it changes a packing recipe a little at a time, and keeps a new recipe only if it wins on files it never saw. One kept recipe is 2% smaller than the best built-in setting on data files.</p>
+<h4>5. Three versions</h4><p>Fast for speed, everyday for normal use, and max for files you rarely open.</p></div></section>
+
+<section class="blk glass"><h3 class="serif">How it compares</h3><div class="tw"><table class="vt"><thead><tr><th>Tool</th><th>Size of the 12 standard test files (212 MB)</th></tr></thead><tbody>
+<tr><td><b>IC max</b></td><td class="n">39.00 MB</td></tr>
+<tr><td><b>IC everyday</b></td><td class="n">42.77 MB</td></tr>
+<tr><td><b>IC fast</b></td><td class="n">47.09 MB</td></tr>
+<tr><td>xz, the strongest common tool</td><td class="n">48.46 MB</td></tr>
+<tr><td>7-Zip</td><td class="n">48.76 MB</td></tr>
+<tr><td>zstd</td><td class="n">52.65 MB</td></tr></tbody></table></div><p class="note">Silesia corpus, the standard set researchers use. Every file opened back exactly. Research tools such as paq8px still make smaller files (27.68 MB), but take hours.</p></section>
+
+<section class="blk glass"><h3 class="serif">How to install</h3><div><ol class="steps">
+<li><span class="k">1</span><div><b>Download</b><span>Click Download for Mac above. Open IC.dmg from your Downloads folder.</span></div></li>
+<li><span class="k">2</span><div><b>Install</b><span>Double-click Install IC.command. Everything goes in your own home folder.</span></div></li>
+<li><span class="k">3</span><div><b>Save a file smaller</b><span>In Finder, right-click any file, choose Quick Actions, then Save as .ic.</span></div></li>
+<li><span class="k">4</span><div><b>Open it</b><span>Double-click the .ic file. You get the original back, exactly.</span></div></li>
+<li><span class="k">5</span><div><b>Optional: automatic packing</b><span>Turn it on in the IC Files app. It runs at 1:00 AM, only when the Mac is plugged in and idle.</span></div></li>
+</ol><p class="note">To remove IC, run <code>bash "Install IC.command" --uninstall</code>. Everything goes to the Trash.</p></div></section>
 $FOOT
 EOF
